@@ -392,6 +392,70 @@
     .note .n-text { font-size: 13.5px; line-height: 1.6; color: #e4e1d7; }
     .note .n-text b { color: var(--gold-bright); font-weight: 600; }
 
+    /* ---------- Location ---------- */
+    .location {
+      margin-top: 30px;
+      text-align: center;
+    }
+    .location .loc-title {
+      font-size: 11px;
+      letter-spacing: .3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .location .loc-place {
+      font-family: var(--serif);
+      font-size: clamp(22px, 5.5vw, 28px);
+      color: var(--white);
+      margin-bottom: 6px;
+    }
+    .location .loc-sub {
+      font-family: var(--serif-soft);
+      font-style: italic;
+      font-size: 16px;
+      color: var(--gold-light);
+      margin-bottom: 18px;
+    }
+    .map-frame {
+      position: relative;
+      width: 100%;
+      padding-bottom: 66%;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(212,175,55,.4);
+      box-shadow: 0 12px 30px rgba(0,0,0,.4);
+    }
+    .map-frame iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    .map-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      margin-top: 16px;
+      padding: 13px 24px;
+      border-radius: 999px;
+      border: 1px solid rgba(212,175,55,.5);
+      background: rgba(212,175,55,.08);
+      color: var(--gold-bright);
+      font-family: var(--sans);
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: .03em;
+      text-decoration: none;
+      transition: transform .25s ease, background .25s ease;
+    }
+    .map-btn:hover { transform: translateY(-3px); background: rgba(212,175,55,.16); }
+
+    @media print { .map-frame { display: none; } }
+
     /* ---------- RSVP ---------- */
     .rsvp {
       margin-top: 30px;
@@ -597,6 +661,16 @@
           <span class="n-ico">🥤</span>
           <span class="n-text"><b>Opcional:</b> si lo deseas, puedes traer alguna bebida para compartir durante la celebración.</span>
         </div>
+      </div>
+
+      <div class="location reveal d7">
+        <p class="loc-title">✦ Lugar de la celebración ✦</p>
+        <p class="loc-place">🏡 En mi casa</p>
+        <p class="loc-sub">Te esperamos para celebrar juntos este gran logro</p>
+        <div class="map-frame">
+          <iframe src="https://www.google.com/maps/embed?pb=!4v1785787845029!6m8!1m7!1sWKaStn1I9ZhtNwHNCmDzcw!2m2!1d-0.2175123548834074!2d-78.48849500307473!3f314.14856!4f0!5f0.7820865974627469" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Ubicación de la fiesta"></iframe>
+        </div>
+        <a class="map-btn" href="https://www.google.com/maps/dir/?api=1&destination=-0.2175123548834074,-78.48849500307473" target="_blank" rel="noopener">📍 Cómo llegar</a>
       </div>
 
       <div class="rsvp reveal d8">
